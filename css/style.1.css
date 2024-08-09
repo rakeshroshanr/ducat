@@ -1,0 +1,86 @@
+*{margin: 0px;padding: 0px;box-sizing: border-box;}
+.header{padding: 40px;background: greenyellow;}
+.header h2{float: right; margin-right: 150px; font-size: 4vw;}
+.menu {padding: 15px 0px; background: lightblue; position: sticky; top: 0px;}
+.menu a{text-decoration: none;padding: 15px 40px;}
+.menu a:hover{background: blue; color: white;}
+.slider{padding: 900px;background: url(../images/b1.jpg);
+animation: slider 4s;animation-iteration-count: infinite;
+background-repeat: no-repeat;
+}
+
+
+
+
+
+@keyframes slider{
+    0%{
+        background: url(../images/b2.jpg);
+    }
+    25%{
+        background: url(../images/b4.webp);
+    }
+    50%{
+        background: url(../images/b1.jpg);
+    }
+
+    75%{
+        background: url(../images/b3.jpg);
+    }
+}
+
+
+
+
+.center{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 7px;
+}
+.left ul{list-style: none;margin-top: 20px;}
+.left li{width: 100%;background: goldenrod;margin-top: 5px; text-align: center;padding: 15px 0px;}
+.left #mylist{background: blueviolet; font-size: 2vw;}
+.prow{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 4px;
+    margin-top:20px ;
+}
+.product{border: 1px solid blue;}
+.product img{height: auto; max-width: 100%;}
+.data{padding: 10px; text-align: justify; line-height: 30px;}
+.data button{padding: 8px 10px; background: orange; margin-top: 10px;}
+
+.footer{padding: 30px; text-align: center; background: black; color: white; font-size: 1vw;}
+
+
+
+@media only screen and (max-width:1200px){
+    .prow{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+
+
+@media only screen and (max-width:992px){
+    .center{
+        grid-template-columns:40% auto;
+    }
+    .prow{
+        grid-template-columns:auto auto;
+    }
+}
+
+
+@media only screen and (max-width:768px){
+    .header h2{margin-right: 20px;}
+    .menu{position: relative;}
+    .menu a{display: block; text-align: center;}
+    .center{
+        grid-template-columns:auto;
+    }
+    .prow{
+        grid-template-columns:auto;
+    }
+}
